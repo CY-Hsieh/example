@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>tw.com.ChYuHsieh</groupId>
+  <artifactId>CC109</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>CC109</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <spring-boot-admin.version>2.2.1</spring-boot-admin.version>
+  </properties>
+  
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.5.RELEASE</version>
+    <relativePath /> <!-- lookup parent from repository -->
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-logging</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    
+    <!-- test -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- Log4j -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-jwt</artifactId>
+		    <version>1.1.0.RELEASE</version>
+		</dependency>
+    <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl -->
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-impl</artifactId>
+		    <version>0.11.1</version>
+		</dependency> 
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-api</artifactId>
+		    <version>0.11.1</version>
+		</dependency>		
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson -->
+		<dependency>
+		    <groupId>io.jsonwebtoken</groupId>
+		    <artifactId>jjwt-jackson</artifactId>
+		    <version>0.11.1</version>
+		</dependency>
+		 
+		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>1.14</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+		    <groupId>com.google.zxing</groupId>
+		    <artifactId>core</artifactId>
+		    <version>3.4.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>3.1.0</version>
+		</dependency>
+    <dependency>
+      <groupId>com.github.gerritjvv</groupId>
+      <artifactId>crypto-core</artifactId>
+      <version>LATEST</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.junit.vintage</groupId>
+          <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
